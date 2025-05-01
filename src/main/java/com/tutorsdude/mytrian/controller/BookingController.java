@@ -1,0 +1,39 @@
+package com.tutorsdude.mytrian.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.tutorsdude.mytrian.dto.Booking;
+import com.tutorsdude.mytrian.dto.BookingResponse;
+import com.tutorsdude.mytrian.service.BookingService;
+
+@RestController
+@RequestMapping("/api/booking")
+public class BookingController {
+	
+	@Autowired
+	private BookingService bookingService;
+	
+	@PostMapping
+    public BookingResponse bookTrain(@RequestParam int trainNo,@RequestParam int noOfPassengers,@RequestParam int userId) {                         
+        return bookingService.bookTrain(trainNo, noOfPassengers, userId);
+    }
+	
+	@GetMapping("{pnr}")
+	public Booking getBookingByPnr(@PathVariable String pnr) {
+		return bookingService.getBookingByPnr(pnr);
+	}
+	
+	@GetMapping
+	public List<Booking> getAllBooking(){
+		return bookingService.getAllBooking();
+	}
+
+}
