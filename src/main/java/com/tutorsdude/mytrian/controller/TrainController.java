@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.tutorsdude.mytrian.dto.Train;
@@ -24,7 +25,7 @@ public class TrainController {
 	@Autowired
 	private TrainService service;
 	
-	@PostMapping
+	@PostMapping("/addTrain")
 	public String createTrain(@RequestBody Train train) {
 		if(train!=null) {
 			service.createTrain(train);
@@ -33,28 +34,36 @@ public class TrainController {
 		return "Train not added try again";
 	}
 	
-	@GetMapping
+	@GetMapping("/getAllTrain")
 	public List<Train> getAllTrain(){
 		return service.getAllTrain();
 	}
 	
-	@GetMapping("/{id}")
+	@GetMapping("/getTrainById/{id}")
 	public Optional<Train> getTrainById(@PathVariable int id){
 		return service.getAllTrainById(id);
 	}
 	
-	@PutMapping("/{id}")
+	@PutMapping("/updateTrain/{id}")
 	public Train updateTrain(@PathVariable int id,@RequestBody Train trainDetails) {
 		return service.updateTrain(id, trainDetails);
 	}
 	
-	@DeleteMapping("/{id}")
+	@DeleteMapping("deleteTrainById/{id}")
 	public String deleteTrain(@PathVariable int id) {
 		if(id>0) {
 			service.deleteTrain(id);
 			return "Train Deleted successfully";
 		}
 		return "Train not deleted try again";
+	}
+	
+	@GetMapping("/find")
+	public Optional<Train> getTrainBySourceAndDestination(@RequestParam String source,@RequestParam String destination) {
+		if(source!=null || destination!=null) {
+			return service.getTrainBySourceAndDestination(source, destination);
+		}
+		return null;
 	}
 
 }

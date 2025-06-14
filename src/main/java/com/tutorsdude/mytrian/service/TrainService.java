@@ -16,5 +16,7 @@ public interface TrainService {
 	public Train updateTrain(int id,Train trainDetails);
 	
 	public void deleteTrain(int id);
+	
+	public Optional<Train> getTrainBySourceAndDestination(String source,String destination);
 
 }

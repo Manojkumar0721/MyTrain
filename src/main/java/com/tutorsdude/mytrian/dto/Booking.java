@@ -41,7 +41,7 @@ public class Booking {
         StringBuilder pnr = new StringBuilder();
         Random random = new Random();
         
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < 10; i++) {
             int index = random.nextInt(characters.length());
             pnr.append(characters.charAt(index));
         }

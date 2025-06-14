@@ -23,7 +23,7 @@ public class UserController {
 	@Autowired
 	private UserService service;
 	
-	@PostMapping
+	@PostMapping("/addUser")
 	public String createUser(@RequestBody User user) {
 		if(user!=null) {
 			service.createUser(user);
@@ -32,22 +32,22 @@ public class UserController {
 		return "User not added try again";
 	}
 	
-	@GetMapping
+	@GetMapping("/getAllUser")
 	public List<User> getAllUser(){
 		return service.getAllUser();
 	}
 	
-	@GetMapping("/{id}")
+	@GetMapping("/getUserById/{id}")
 	public Optional<User> getUserById(@PathVariable int id){
 		return service.getAllUserById(id);
 	}
 	
-	@PutMapping("/{id}")
+	@PutMapping("/updateUser/{id}")
 	public User updateUser(@PathVariable int id,@RequestBody User userDetails) {
 		return service.updateUser(id, userDetails);
 	}
 	
-	@DeleteMapping("/{id}")
+	@DeleteMapping("/deleteUserById/{id}")
 	public String deleteUser(@PathVariable int id) {
 		if(id>0) {
 			service.deleteUser(id);

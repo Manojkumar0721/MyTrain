@@ -21,17 +21,17 @@ public class BookingController {
 	@Autowired
 	private BookingService bookingService;
 	
-	@PostMapping
+	@PostMapping("/bookTrain")
     public BookingResponse bookTrain(@RequestParam int trainNo,@RequestParam int noOfPassengers,@RequestParam int userId) {                         
         return bookingService.bookTrain(trainNo, noOfPassengers, userId);
     }
 	
-	@GetMapping("{pnr}")
+	@GetMapping("/getBookingByPnr/{pnr}")
 	public Booking getBookingByPnr(@PathVariable String pnr) {
 		return bookingService.getBookingByPnr(pnr);
 	}
 	
-	@GetMapping
+	@GetMapping("/getAllBooking")
 	public List<Booking> getAllBooking(){
 		return bookingService.getAllBooking();
 	}

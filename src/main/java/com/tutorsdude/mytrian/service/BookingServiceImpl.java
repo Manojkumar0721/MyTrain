@@ -26,6 +26,9 @@ public class BookingServiceImpl implements BookingService{
 	
 	@Autowired
 	private UserRepo userRepo;
+	
+	@Autowired
+	private EmailService emailService;
 
 	@Override
     public BookingResponse bookTrain(int trainNo, int noOfPassengers, int userId) {
@@ -58,6 +61,17 @@ public class BookingServiceImpl implements BookingService{
 	    
 	    User user = userOptional.get();
 	    Booking booking = createBooking(train, user, noOfPassengers);
+	    
+	    String subject = "Train Booking Conformation";
+	    String body = "Hello " + user.getName() + ",\n\n" 
+	    		+ "Your booking has been confirmed.\n"
+	    		+ "Train Name: " + train.getTrainName() + "\n"
+	    		+ "From: " + train.getSource() + "\n"
+	    		+ "To: " + train.getDestination() + "\n"
+	    		+ "noOfPassengers: " + noOfPassengers + "\n"
+	    		+ "Thank you for booking with us!";
+	    
+	    emailService.sendBookingEmail(user.getEmail(), subject, body);
 	    
 	    return new BookingResponse("Booking successful", booking);
 	}

@@ -11,5 +11,5 @@ import com.tutorsdude.mytrian.dto.Booking;
 public interface BookingRepo extends JpaRepository<Booking, Integer>{
     
 	@Query("SELECT booking FROM Booking booking WHERE booking.pnr = :pnr")
-	Optional<Booking> findByPnr(@Param("pnr") String pnr);
+	public Optional<Booking> findByPnr(@Param("pnr") String pnr);
 }

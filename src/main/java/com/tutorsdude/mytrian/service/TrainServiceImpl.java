@@ -65,4 +65,13 @@ public class TrainServiceImpl implements TrainService{
 		trainRepo.deleteById(id);
 	}
 
+
+	@Override
+	public Optional<Train> getTrainBySourceAndDestination(String source, String destination) {
+		if(source!=null || destination!=null) {
+			return trainRepo.getTrainBySourceAndDestination(source, destination);
+		}
+		return null;
+	}
+
 }
