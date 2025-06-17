@@ -1,4 +1,4 @@
-package com.tutorsdude.mytrian.controller;
+package com.tutorsdude.mytrain.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.tutorsdude.mytrian.dto.Train;
-import com.tutorsdude.mytrian.service.TrainService;
+import com.tutorsdude.mytrain.dto.Train;
+import com.tutorsdude.mytrain.service.TrainService;
 
 
 @RestController

@@ -1,4 +1,4 @@
-package com.tutorsdude.mytrian.controller;
+package com.tutorsdude.mytrain.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.tutorsdude.mytrian.dto.User;
-import com.tutorsdude.mytrian.service.UserService;
+import com.tutorsdude.mytrain.dto.User;
+import com.tutorsdude.mytrain.service.UserService;
 
 @RestController
 @RequestMapping("/api/user")

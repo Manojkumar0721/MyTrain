@@ -1,4 +1,4 @@
-package com.tutorsdude.mytrian.controller;
+package com.tutorsdude.mytrain.controller;
 
 import java.util.List;
 
@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.tutorsdude.mytrian.dto.Booking;
-import com.tutorsdude.mytrian.dto.BookingResponse;
-import com.tutorsdude.mytrian.service.BookingService;
+import com.tutorsdude.mytrain.dto.Booking;
+import com.tutorsdude.mytrain.dto.BookingResponse;
+import com.tutorsdude.mytrain.service.BookingService;
 
 @RestController
 @RequestMapping("/api/booking")

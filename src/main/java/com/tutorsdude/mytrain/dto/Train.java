@@ -1,7 +1,7 @@
-package com.tutorsdude.mytrian.dto;
+package com.tutorsdude.mytrain.dto;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.tutorsdude.mytrian.constants.TrainStatus;
+import com.tutorsdude.mytrain.constants.TrainStatus;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;

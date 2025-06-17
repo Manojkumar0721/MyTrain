@@ -1,9 +1,9 @@
-package com.tutorsdude.mytrian.service;
+package com.tutorsdude.mytrain.service;
 
 import java.util.List;
 import java.util.Optional;
 
-import com.tutorsdude.mytrian.dto.Train;
+import com.tutorsdude.mytrain.dto.Train;
 
 public interface TrainService {
 	

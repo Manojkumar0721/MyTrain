@@ -1,4 +1,4 @@
-package com.tutorsdude.mytrian.service;
+package com.tutorsdude.mytrain.service;
 
 public interface EmailService {
 	

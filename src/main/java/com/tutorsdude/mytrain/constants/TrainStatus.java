@@ -1,4 +1,4 @@
-package com.tutorsdude.mytrian.constants;
+package com.tutorsdude.mytrain.constants;
 
 
 public enum TrainStatus {

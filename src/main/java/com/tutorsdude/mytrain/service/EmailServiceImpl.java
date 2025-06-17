@@ -1,4 +1,4 @@
-package com.tutorsdude.mytrian.service;
+package com.tutorsdude.mytrain.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;

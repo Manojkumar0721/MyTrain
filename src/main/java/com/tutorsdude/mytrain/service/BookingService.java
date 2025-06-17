@@ -1,10 +1,10 @@
-package com.tutorsdude.mytrian.service;
+package com.tutorsdude.mytrain.service;
 
 import java.util.List;
 
-import com.tutorsdude.mytrian.constants.TrainStatus;
-import com.tutorsdude.mytrian.dto.Booking;
-import com.tutorsdude.mytrian.dto.BookingResponse;
+import com.tutorsdude.mytrain.constants.TrainStatus;
+import com.tutorsdude.mytrain.dto.Booking;
+import com.tutorsdude.mytrain.dto.BookingResponse;
 
 public interface BookingService {
 	

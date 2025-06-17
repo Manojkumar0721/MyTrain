@@ -1,4 +1,4 @@
-package com.tutorsdude.mytrian.service;
+package com.tutorsdude.mytrain.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,8 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.tutorsdude.mytrian.dto.User;
-import com.tutorsdude.mytrian.repo.UserRepo;
+import com.tutorsdude.mytrain.dto.User;
+import com.tutorsdude.mytrain.repo.UserRepo;
 
 @Service
 public class UserServiceImpl implements UserService{

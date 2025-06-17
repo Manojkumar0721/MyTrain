@@ -1,4 +1,4 @@
-package com.tutorsdude.mytrian.service;
+package com.tutorsdude.mytrain.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,14 +6,14 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.tutorsdude.mytrian.constants.TrainStatus;
-import com.tutorsdude.mytrian.dto.Booking;
-import com.tutorsdude.mytrian.dto.BookingResponse;
-import com.tutorsdude.mytrian.dto.Train;
-import com.tutorsdude.mytrian.dto.User;
-import com.tutorsdude.mytrian.repo.BookingRepo;
-import com.tutorsdude.mytrian.repo.TrainRepo;
-import com.tutorsdude.mytrian.repo.UserRepo;
+import com.tutorsdude.mytrain.constants.TrainStatus;
+import com.tutorsdude.mytrain.dto.Booking;
+import com.tutorsdude.mytrain.dto.BookingResponse;
+import com.tutorsdude.mytrain.dto.Train;
+import com.tutorsdude.mytrain.dto.User;
+import com.tutorsdude.mytrain.repo.BookingRepo;
+import com.tutorsdude.mytrain.repo.TrainRepo;
+import com.tutorsdude.mytrain.repo.UserRepo;
 
 @Service
 public class BookingServiceImpl implements BookingService{
